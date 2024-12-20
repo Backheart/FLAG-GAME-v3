@@ -37,6 +37,7 @@ a {
 
 .flag-container {
   margin-bottom: 20px;
+  width: 45%;
 }
 
 #guess-input {
@@ -68,10 +69,6 @@ a {
 
 }
 
-.flag-container{
-  width: 45%;
-}
-
 
 .bottom-btn-input{
   display: flex;
@@ -95,24 +92,6 @@ body{
   margin: 0;
   padding: 0;
 }
-/* Add background color options */
-body {
-
-  background-color: #f0f0f0; /* Default background color */
-}
-
-.background-dark {
-  background-color: #f1fb3328;
-}
-
-.background-grey {
-  background-color: #918e8e;
-}
-
-.background-blue {
-  background-color: #87CEEB;
-}
-
 
 /* Position dropdown menu*/
 .dropdown-btn {
@@ -222,8 +201,8 @@ body {
   fill: white;
 }
 
-.inside-menu {
-  display: none; /* Hide by default */
+inside-menu {
+ /*   Hide by default */
   position: absolute;
   top: 32px; /* Match nav-bar height */
   right: 0;
@@ -231,15 +210,26 @@ body {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
-.inside-menu button {
+.inside-menu{
+  display: flex;
+  position: absolute;
+  
+  justify-content: center;
+  align-content: center;
+  max-height: 100%;
+
+  visibility: hidden;
+}
+
+inside-menu button {
   display: none;
 }
-.inside-menu.open {
+inside-menu.open {
   display: block; /* Show when .open class is added */
 }
 
 .inside-menu .close-btn {
-
+fill: white;
   background-color: transparent;
   border: none;
   font-size: 24px;
@@ -247,10 +237,12 @@ body {
 }
 
 .inside-menu .close-btn:hover {
-  color: #ccc;
+  fill: #000000;
 }
 
-
+.flag-container {
+  margin: 0 auto;
+}
  
 
   @media (max-width: 720px) {
@@ -267,63 +259,59 @@ body {
       display: block;
     }
      
-    .inside-menu .close-btn {
+    /* .inside-menu .close-btn {
       display: block;
     }
-  
+   */
     /* Adjust inside menu */
     .inside-menu {
       position: absolute;
       top: 50px; /* Match nav-bar height */
-      right: 0;
+      
       background-color: #87cfeb71; /* Match nav-bar background */
-      padding: 8px;
+     
       border-radius: 4px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-      backdrop-filter: blur(2px);
+      backdrop-filter: blur(3px);
+      width: 100%;
+      transition: width 0.5s ease-in-out, heigth 0.5s ease-in-out;
+      visibility: hidden;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 0 0 10% 0;
     }
     
     .inside-menu button {
+      
       display: block;
       margin-bottom: 10px;
+     
     }
     
     #reset-game, #reset-high-scores, #change-background, #about-game, #about-game2, #cheat-list{
-      transition: box-shadow 0.3s ease-in-out 
+      transition: box-shadow 0.3s ease-in-out;
+      background-color: rgb(172, 172, 172);
+      color: rgb(0, 0, 0);
+   
     }
     
-    #about-game2:hover{
+    #reset-game:hover,
+    #reset-high-scores:hover,
+    #change-background:hover,
+    #cheat-list:hover,
+    #about-game2:hover {
+      background-color: rgba(0, 255, 255, 0.438);
       box-shadow: black 0 0 3px 0;
       cursor: pointer;
     }
-    #about-game2:active{
+    #reset-game:active,
+    #reset-high-scores:active,
+    #change-background:active,
+    #about-game2:active {
       background-color: rgba(0, 0, 0, 0.301);
-    }
-  
-     #change-background:hover{
-      box-shadow: black 0 0 3px 0;
-      cursor: pointer;
-    }  
-
-    #change-background:active{
-      background-color: rgba(0, 0, 0, 0.301);
-    }
-     #reset-high-scores:hover{
-      box-shadow: black 0 0 3px 0;
-      cursor: pointer;
-    }  
-
-    #reset-high-scores:active{
-      background-color: rgba(0, 0, 0, 0.301);
-    }
-     #reset-game:hover{
-      box-shadow: black 0 0 3px 0;
-      cursor: pointer;
     }
 
-    #reset-game:active{
-      background-color: rgba(0, 0, 0, 0.301);
-    }
     .flag-container{
       width: 80%;
     }
