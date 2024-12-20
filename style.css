@@ -1,0 +1,332 @@
+
+a {
+  text-decoration: none;
+}
+#nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  top: 0;
+  background-color: #87CEEB;
+  height: 32px;
+  padding: 8px;
+  margin: 0;
+}
+.game-container {
+ padding: 10px;
+  height: 100hv;
+  text-align: center;
+
+}
+ h1{
+  font-family: "Rethink Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+ }
+.scoreboard {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  padding: auto;
+  font-family: "Rethink Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+}
+
+.flag-container {
+  margin-bottom: 20px;
+}
+
+#guess-input {
+  width: 200px;
+  height: 30px;
+  font-size: 1rem;
+  padding: 10px;
+  border-radius: 8px;
+  background-color: rgba(0, 255, 255, 0.11);
+}
+
+#submit-guess,  #random-flag-btn, #hint {
+  width: 120px;
+  height: 40px; 
+  border-radius: 8px;
+  margin-top: 10px;
+  font-size: .8rem;
+  
+}
+
+#result-message {
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 20px;
+  font-family: "Rethink Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+
+}
+
+.flag-container{
+  width: 45%;
+}
+
+
+.bottom-btn-input{
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+footer{
+  clear: both; 
+ padding: 8px; 
+  margin-top: 70px;
+  font-size: .9rem;
+  font-family: "Rethink Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+}
+/* Add background color options */
+body {
+
+  background-color: #f0f0f0; /* Default background color */
+}
+
+.background-dark {
+  background-color: #f1fb3328;
+}
+
+.background-grey {
+  background-color: #918e8e;
+}
+
+.background-blue {
+  background-color: #87CEEB;
+}
+
+
+/* Position dropdown menu*/
+.dropdown-btn {
+
+  background-color: #af4ca2d8;
+  color: white;
+  
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  width: 150px;
+  height: 48px;
+  transition: box-shadow 0.3s ease-in-out;
+
+
+}
+#reset-game, #reset-high-scores, #change-background, #game-settings, #about-game, #about-game2, #cheat-list, #return-game{
+  width: 150px;
+  height: 48px;
+  border: none;
+  
+}
+
+#return-game{
+  transition: box-shadow 0.3s ease-in-out
+}
+
+#return-game:hover{
+  box-shadow: black 0 0 5px 0;
+}
+
+#about-game{
+  transition: box-shadow 0.3s ease-in-out
+}
+#about-game:hover{
+  box-shadow: black 0 0 5px 0;
+}
+#cheat-list{
+  transition: box-shadow 0.3s ease-in-out
+}
+#cheat-list:hover{
+  box-shadow: black 0 0 5px 0;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 49px;
+  right: 8px;
+  background-color: #f9f9f9;
+  min-width: 150px;
+
+  z-index: 1;
+  
+}
+
+.dropdown-content button {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  
+}
+
+.dropdown-content button:hover {
+  background-color: #0000002c
+}
+
+.dropdown-btn:hover + .dropdown-content {
+  display: block;
+  box-shadow: black 0 0 5px 0;
+}
+.dropdown-btn:hover {
+ 
+  box-shadow: black 0 0 5px 0;
+}
+.dropdown-content:hover {
+  display: block;
+}
+
+.about-flags{
+ text-align: center;
+
+}
+
+.about-flags-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about-flags-list{
+  font-family: "Rethink Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+}
+
+
+.menu-btn{
+ cursor: pointer;
+  border: none;
+  display: none; 
+}
+
+.menu-btn:active{
+  fill: white;
+}
+
+.inside-menu {
+  display: none; /* Hide by default */
+  position: absolute;
+  top: 32px; /* Match nav-bar height */
+  right: 0;
+  padding: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.inside-menu button {
+  display: none;
+}
+.inside-menu.open {
+  display: block; /* Show when .open class is added */
+}
+
+.inside-menu .close-btn {
+
+  background-color: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.inside-menu .close-btn:hover {
+  color: #ccc;
+}
+
+
+ 
+
+  @media (max-width: 720px) {
+     #game-settings, #about-game, #cheat {
+      display: none;
+    }
+    /* Hide desktop navigation */
+    #nav-container > .nav-btn > button:not(.menu-btn) {
+      display: none;
+    }
+    
+    /* Show mobile menu */
+    .menu-btn {
+      display: block;
+    }
+     
+    .inside-menu .close-btn {
+      display: block;
+    }
+  
+    /* Adjust inside menu */
+    .inside-menu {
+      position: absolute;
+      top: 50px; /* Match nav-bar height */
+      right: 0;
+      background-color: #87cfeb71; /* Match nav-bar background */
+      padding: 8px;
+      border-radius: 4px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      backdrop-filter: blur(2px);
+    }
+    
+    .inside-menu button {
+      display: block;
+      margin-bottom: 10px;
+    }
+    
+    #reset-game, #reset-high-scores, #change-background, #about-game, #about-game2, #cheat-list{
+      transition: box-shadow 0.3s ease-in-out 
+    }
+    
+    #about-game2:hover{
+      box-shadow: black 0 0 3px 0;
+      cursor: pointer;
+    }
+    #about-game2:active{
+      background-color: rgba(0, 0, 0, 0.301);
+    }
+  
+     #change-background:hover{
+      box-shadow: black 0 0 3px 0;
+      cursor: pointer;
+    }  
+
+    #change-background:active{
+      background-color: rgba(0, 0, 0, 0.301);
+    }
+     #reset-high-scores:hover{
+      box-shadow: black 0 0 3px 0;
+      cursor: pointer;
+    }  
+
+    #reset-high-scores:active{
+      background-color: rgba(0, 0, 0, 0.301);
+    }
+     #reset-game:hover{
+      box-shadow: black 0 0 3px 0;
+      cursor: pointer;
+    }
+
+    #reset-game:active{
+      background-color: rgba(0, 0, 0, 0.301);
+    }
+    .flag-container{
+      width: 80%;
+    }
+  }
+  
+  
